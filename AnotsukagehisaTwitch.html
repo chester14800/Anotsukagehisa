@@ -12,6 +12,10 @@
       <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js></script>
       <script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js></script>
       <script src=/Scripts/AssetsBS3/ie10-viewport-bug-workaround.js></script>
+
+      <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
       <script type="text/javascript">
        function showTwitch () {
            $("#streamTwitch").show();
@@ -78,7 +82,14 @@
     })(jQuery);
     /*]]>*/
     </script>
-    <link rel="Shortcut Icon" type="image/x-icon" href="https://static-cdn.jtvnw.net/emoticons/v1/87294/1.0" />
+
+    <script>
+    function twitchChat () {
+     $("#chatDialog").dialog();
+    }
+  </script>
+
+  
     </head>
 
     <body>
@@ -102,14 +113,15 @@
         </div>
           <div class="container">
            
-          <iframe src="https://player.twitch.tv/?channel=anotsukagehisa" id="streamTwitch" frameborder="0" scrolling="no"   allowfullscreen="true" height="650" width="68%"></iframe>
-           <iframe src="http://vaughnlive.tv/embed/video/linzet000?viewers=true" id="streamVL"frameborder="0" scrolling="no" height="650" width="68%" style="visibility:hidden;display:none"></iframe>           
-        <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" frameborder="0" scrolling="no" height="650" width="30%"></iframe>
+          <iframe src="https://player.twitch.tv/?channel=anotsukagehisa" id="streamTwitch" frameborder="0" scrolling="no"   allowfullscreen="true" height="650" width="98%"></iframe>
+           <iframe src="http://vaughnlive.tv/embed/video/linzet000?viewers=true" id="streamVL"frameborder="0" scrolling="no" height="650" width="98%" style="visibility:hidden;display:none"></iframe>           
+       
         <br>
         <input type=button onclick=window.open("https://www.twitch.tv/anotsukagehisa/subscribe") value="想看本本這邊有" class="btn btn-sm btn-success">
         <input type=button onclick=window.open("https://www.twitchalerts.com/donate/anotsukagehisa") value="想看三次元走這邊" class="btn btn-sm btn-success">
         <button type="button" class="btn btn-info" onclick="showTwitch();">Twitch</button>
         <button type="button" class="btn btn-danger" onclick="showVL();">VL</button>
+         <button type="button" class="btn btn-info" onclick="twitchChat();">Twitch聊天室</button>
           </div>
 
            <div class="container">
@@ -118,6 +130,10 @@
                <a onclick=window.open("https://www.twitchalerts.com/donate/anotsukagehisa")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-88a6121b08144610-320.png"></a>
               <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-00571834e646c711-320.png">
            </div>
+           <div id="chatDialog" title="Twitch聊天室" >
+            <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" frameborder="0" scrolling="no" height="650" width="100%"></iframe>
+          </div>
+        
       <!--   <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#chatModal"> 聊天室</button>
 
        <div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
