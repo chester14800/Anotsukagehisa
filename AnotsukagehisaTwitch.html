@@ -36,6 +36,7 @@
         padding: 0;
         z-index: 99999;
         position: fixed;
+        height:auto;
         background: #ffffff;
     }
     
@@ -43,12 +44,12 @@
         background-color: #3B5998;
         display: block;
         height: 150px;
-        top: 50%;
+        top: 30%;
         margin-top: -75px;
         position: absolute;
         left: -47px;
         width: 47px;
-        background-image: url("http://3.bp.blogspot.com/-1GCgbuSZXK0/T38iRiVF41I/AAAAAAAABpg/WlGuQ3fi-Rs/s1600/vertical-right.png");
+        background-image: url("http://streamernews.tv/wp-content/uploads/2015/10/twitchsubredditsocial_2015oct-1.jpg");
         background-repeat: no-repeat;
         overflow: hidden;
         -webkit-border-top-left-radius: 8px;
@@ -66,7 +67,7 @@
             var $dur = "medium"; // Duration of Animation
             w2b("#fbplikebox").css({
                 right: -250,
-                "top": 100
+                "top": 40
             })
             w2b("#fbplikebox").hover(function() {
                 w2b(this).stop().animate({
@@ -115,22 +116,6 @@
            
           <iframe src="https://player.twitch.tv/?channel=anotsukagehisa" id="streamTwitch" frameborder="0" scrolling="no"   allowfullscreen="true" height="650" width="98%"></iframe>
            <iframe src="http://vaughnlive.tv/embed/video/linzet000?viewers=true" id="streamVL"frameborder="0" scrolling="no" height="650" width="98%" style="visibility:hidden;display:none"></iframe>           
-           
- ░░▄███████▀▀▀▀▀▀███████▄ <br>
- ░▐████▀▒DIDDLY▒▒▒▒▀██████▄ <br>
- ░███▀▒▒▒▒SPAMLY▒▒▒▒▒▀█████ <br>
- ░▐██▒▒▒▒▒▒DOODLY▒▒▒▒▒▒████▌ <br>
- ░▐█▌▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████▌ <br>
- ░░█▒▄▀▀▀▀▀▄▒▒▄▀▀▀▀▀▄▒▐███▌<br>
- ░░░▐░░░▄▄░░▌▐░░░▄▄░░▌▐███▌ <br>
- ░▄▀▌░░░▀▀░░▌▐░░░▀▀░░▌▒▀▒█▌ <br>
- ░▌▒▀▄░░░░▄▀▒▒▀▄░░░▄▀▒▒▄▀▒▌ <br>
- ░▀▄▐▒▀▀▀▀▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒█ <br>
- ░░░▀▌▒▄██▄▄▄▄████▄▒▒▒▒█▀ <br>
- ░░░░▄██████████████▒▒▐▌ <br>
- ░░░▀███▀▀████▀█████▀▒▌ <br>
- ░░░░░▌▒▒▒▄▒▒▒▄▒▒▒▒▒▒▐ <br>
- ░░░░░▌▒▒▒▒▀▀▀▒▒▒▒▒▒▒▐<br>
         <br>
         <input type=button onclick=window.open("https://www.twitch.tv/anotsukagehisa/subscribe") value="想看本本這邊有" class="btn btn-sm btn-success">
         <input type=button onclick=window.open("https://www.twitchalerts.com/donate/anotsukagehisa") value="想看三次元走這邊" class="btn btn-sm btn-success">
@@ -139,15 +124,17 @@
          <button type="button" class="btn btn-info" onclick="twitchChat();">Twitch聊天室</button>
           </div>
 
+          <div id="chatDialog" title="Twitch聊天室" height="400" width="100" >
+             
+          </div>
+
            <div class="container">
               <a onclick=window.open("http://www1.atwiki.jp/jtvwiki/pages/64.html")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-d4992a4f9e282aba-320.png"></a>
 
                <a onclick=window.open("https://www.twitchalerts.com/donate/anotsukagehisa")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-88a6121b08144610-320.png"></a>
               <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-00571834e646c711-320.png">
            </div>
-           <div id="chatDialog" title="Twitch聊天室" height="400" width="100" >
-            <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
-          </div>
+           
         
       <!--   <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#chatModal"> 聊天室</button>
 
@@ -170,10 +157,11 @@
         <footer class="footer">
           <div class="container"><p class="text-muted"></p></div>
         </footer>
-        <div id="fbplikebox" style="display:none;">
-        <div class="fbplbadge"></div>
-        <iframe src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/ZunJueBuFanTaiWanDiWang&amp;width=250&amp;height=250&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23C4C4C4&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:250px;" allowtransparency="true"></iframe>
-    </div>
+        <div id="fbplikebox"  style="display:none;">
+        <div class="fbplbadge" ></div>
+       <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:650px;" allowtransparency="true"  ></iframe>
+
+        </div>
 
     </body>
 </html>
