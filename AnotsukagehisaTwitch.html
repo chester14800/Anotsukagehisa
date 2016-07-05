@@ -11,12 +11,14 @@
       <!-- ... js set ... -->
       <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js></script>
       <script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js></script>
-      <script src=/Scripts/AssetsBS3/ie10-viewport-bug-workaround.js></script>
 
       <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-
+      <link rel="stylesheet" type="text/css" href="easy-sidebar.css">
+      <link rel="stylesheet" type="text/css" href="easy-sidebar2.css">
+       <link rel="stylesheet" type="text/css" href="easy-sidebar3.css">
       <script type="text/javascript">
+
        function showTwitch () {
            $("#streamTwitch").show();
            $("#streamVL").hide();
@@ -47,6 +49,8 @@
             $('#streamVL').css("visibility", "hidden");
        }
       </script>
+
+
       <!--FB --><style type="text/css">
     #fbplikebox {
         display: block;
@@ -100,35 +104,47 @@
     })(jQuery);
     /*]]>*/
     </script>
+      <script type="text/javascript">
+      $(document).ready(function(){                       
+
+       //Navigation Menu Slider
+        $('#nav-expander').on('click',function(e){
+          e.preventDefault();
+          $('body').toggleClass('nav-expanded');
+        });
+        $('#nav-close').on('click',function(e){
+          e.preventDefault();
+          $('body').removeClass('nav-expanded');
+        });
+
+        // Initialize navgoco with default options
+        $(".main-menu").navgoco({
+            caret: '<span class="caret"></span>',
+            accordion: false,
+            openClass: 'open',
+            save: true,
+            cookie: {
+                name: 'navgoco',
+                expires: false,
+                path: '/'
+            },
+            slide: {
+                duration: 300,
+                easing: 'swing'
+            }
+        });
+
+      });
+      </script>
 
     </head>
     <body>
       <title >Anotsukagehisa</title>
       <div class="container">
 
-       <nav class="navbar navbar-inverse navbar-Static-top" role="navigation">
-          <div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> 
-            <span class="sr-only"></span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> </button> 
-            <a class="navbar-brand" href="#">首頁</a></div>
-            <div id="navbar" class="collapse navbar-collapse">
-             <ul class="nav nav-pills">
-                <li role="presentation" class="active"> <a onclick=window.open("https://www.youtube.com/user/LIN801015")>YOUTUBE</a></li>
-                <li role="presentation" class="active">  
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown"><font color="white">頻道切換</font><b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                     <li><a onclick="showTwitch();">Twitch</a></li>
-                       <li><a onclick="showVL();">VL</a></li>
-                       <li><a onclick="showYoutube();">Youtube</a></li>
-                    </ul>
-                </li>
-            </ul>
+      
+           
 
-          </nav>
-        </div> 
 
           <div class="container">
              <a onclick=window.open("https://www.facebook.com/ZunJueBuFanTaiWanDiWang/")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-c5d69c3a6adb05f2-320.png"></a>
@@ -140,9 +156,7 @@ document.getElementsByTagName("head")[0].appendChild(s);
 
           <iframe src="https://player.twitch.tv/?channel=anotsukagehisa" id="streamTwitch" frameborder="0" scrolling="no"   allowfullscreen="true" height="550" width="98%"></iframe>
            <iframe src="http://vaughnlive.tv/embed/video/linzet000?viewers=true" id="streamVL"frameborder="0" scrolling="no" height="550" width="98%" style="visibility:hidden;display:none"></iframe>   
-           
-
-           <div class="container">
+         <div class="container">
               <a onclick=window.open("http://www1.atwiki.jp/jtvwiki/pages/64.html")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-d4992a4f9e282aba-320.png"></a>
 
                <a onclick=window.open("https://www.twitchalerts.com/donate/anotsukagehisa")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-88a6121b08144610-320.png"></a>
@@ -151,32 +165,36 @@ document.getElementsByTagName("head")[0].appendChild(s);
               
               
            </div>
+         <nav>
+   <ul class="list-unstyled main-menu">
+    <!--Include your navigation here-->
+    <li class="text-right"><a href="#" id="nav-close">隱藏</a></li>
+    <div>
+   <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:550px;" allowtransparency="true"  ></iframe>
+    </div>
+    </nav>
 
+  <div class="navbar navbar-inverse navbar-fixed-top">      
 
-        
-      <!--   <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#chatModal"> 聊天室</button>
-
-       <div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title" id="myModalLabel">聊天室</h4>
-                </div>
-                <div class="modal-body">
-                    <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" frameborder="0" scrolling="no" height="500" width="100%"></iframe>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    <!--Include your brand here-->
+    <a class="navbar-brand" href="#">Off Canvas Menu</a>
+    <div class="navbar-header pull-right">
+      <a id="nav-expander" class="nav-expander fixed">
+       聊天室<i class="fa fa-bars fa-lg white"></i>
+      </a>
+    </div>
+    </div> 
+</div>
+          
+          
         <footer class="footer">
           <div class="container"><p class="text-muted"></p></div>
         </footer>
-        <div id="fbplikebox"  style="display:none;">
+       <!--<div id="fbplikebox"  style="display:none;">
         <div class="fbplbadge" ></div>
        <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:500px;" allowtransparency="true"  ></iframe>
 
-        </div>
+        </div>-->
 
     </body>
 </html>
