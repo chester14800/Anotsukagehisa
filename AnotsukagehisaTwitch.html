@@ -136,6 +136,22 @@
 
       });
       </script>
+      <script type="text/javascript">
+      function changChat(){
+         if($("#spChat").html() == 'Twitch')
+        {
+          $("#livehouseChat").hide();
+          $("#twitchChat").show();
+          $("#spChat").html("Livehouse");
+        }
+        else{
+           $("#twitchChat").hide();
+          $("#livehouseChat").show();
+           $("#spChat").html("Twitch");
+        }
+    
+        }
+      </script>
 
     </head>
     <body>
@@ -148,10 +164,10 @@
             <span class="icon-bar"></span> 
             <span class="icon-bar"></span> 
             <span class="icon-bar"></span> </button> 
-            <a class="navbar-brand" href="#">首頁</a></div>
+            <a class="navbar-brand" href="#"></a></div>
             <div id="navbar" class="collapse navbar-collapse">
              <ul class="nav nav-pills">
-                <li role="presentation" class="active"> <a onclick=window.open("https://www.youtube.com/user/LIN801015")>YOUTUBE</a></li>
+                <li role="presentation"> <a onclick=window.open("https://www.youtube.com/user/LIN801015")>YOUTUBE</a></li>
                 <li role="presentation" class="active">  
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown"><font color="white">頻道切換</font><b class="caret"></b></a>
@@ -189,10 +205,11 @@ document.getElementsByTagName("head")[0].appendChild(s);
            </div>
          <nav>
    <ul class="list-unstyled main-menu">
-    <!--Include your navigation here-->
-    <li class="text-right"><a href="#" id="nav-close">隱藏</a></li>
+    <li class="navbar-right"><a href="#" id="nav-close">X</a></li><span id="spChat" style="visibility:hidden">Twitch</span>
     <div>
-   <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:550px;" allowtransparency="true"  ></iframe>
+      <button type="button" class="btn btn-success btn-xs" onclick="changChat();">切換聊天室</button> 
+   <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" scrolling="no" id="twitchChat"  frameborder="0" style="border:none; overflow:hidden; width:100%; height:550px;"allowtransparency="true"></iframe>
+   <iframe src="https://livehouse.in/channel/470709/chatroom" scrolling="no" id="livehouseChat" frameborder="0" style="border:none; overflow:hidden; width:100%; height:550px; display:none;"allowtransparency="true" ></iframe>
     </div>
     </nav>
 
