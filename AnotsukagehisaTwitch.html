@@ -1,227 +1,214 @@
 <!DOCTYPE html>
 <html>
-    <!-- ... Defaulset ... -->
-    <head lang="en">
-     
-      <meta charset=utf-8>
-      <meta http-equiv=X-UA-Compatible content="IE=edge">
-      <meta name=viewport content="width=device-width, initial-scale=1">
-      <meta name=description content=""><meta name=author content="">
-      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-      <!-- ... js set ... -->
-      <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js></script>
-      <script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js></script>
+<!-- ... Defaulset ... -->
 
-      <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-      <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-      <link rel="stylesheet" type="text/css" href="easy-sidebar.css">
-      <link rel="stylesheet" type="text/css" href="easy-sidebar2.css">
-       <link rel="stylesheet" type="text/css" href="easy-sidebar3.css">
-      <script type="text/javascript">
-
-       function showTwitch () {
-           $("#streamTwitch").show();
-           $("#streamVL").hide();
+<head lang="en">
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=description content="">
+    <meta name=author content="">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- ... js set ... -->
+    <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js></script>
+    <script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="easy-sidebar.css">
+    <link rel="stylesheet" type="text/css" href="easy-sidebar2.css">
+    <link rel="stylesheet" type="text/css" href="easy-sidebar3.css">
+    <script type="text/javascript">
+        function showTwitch() {
+            $("#streamTwitch").show();
+            $("#streamVL").hide();
             $("#streamYT").hide();
+            $('#streamTwitch').css("visibility", "visible");
+            $('#streamVL').css("visibility", "hidden");
+            $('#streamYT').css("visibility", "hidden");
+        }
 
-           $('#streamTwitch').css("visibility", "visible");
-           $('#streamVL').css("visibility", "hidden");
-           $('#streamYT').css("visibility", "hidden");
-       }
-       function showVL () {
+        function showVL() {
             $("#streamVL").show();
             $("#streamTwitch").hide();
             $("#streamYT").hide();
-
             $('#streamVL').css("visibility", "visible");
             $('#streamTwitch').css("visibility", "hidden");
             $('#streamYT').css("visibility", "hidden");
-       }
-        function showYoutube () {
-            $("#streamYt").show();
+        }
 
+        function showYoutube() {
+            $("#streamYt").show();
             $("#streamTwitch").hide();
             $("#streamVL").hide();
-
-
             $('#streamYT').css("visibility", "visible");
             $('#streamTwitch').css("visibility", "hidden");
             $('#streamVL').css("visibility", "hidden");
-       }
-      </script>
-
-
-      <!--FB --><style type="text/css">
-    #fbplikebox {
-        display: block;
-        padding: 0;
-        z-index: 99999;
-        position: fixed;
-        height:auto;
-        background: #ffffff;
-    }
-    
-    .fbplbadge {
-        background-color: #3B5998;
-        display: block;
-        height: 90px;
-        top: 15%;
-        margin-top: -75px;
-        position: absolute;
-        left: -47px;
-        width: 47px;
-        background-image: url("http://streamernews.tv/wp-content/uploads/2015/10/twitchsubredditsocial_2015oct-1.jpg");
-        background-repeat: no-repeat;
-        overflow: hidden;
-        -webkit-border-top-left-radius: 8px;
-        -webkit-border-bottom-left-radius: 8px;
-        -moz-border-radius-topleft: 8px;
-        -moz-border-radius-bottomleft: 8px;
-        border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
-    }
+        }
+    </script>
+    <!--FB -->
+    <style type="text/css">
+        #fbplikebox {
+            display: block;
+            padding: 0;
+            z-index: 99999;
+            position: fixed;
+            height: auto;
+            background: #ffffff;
+        }
+        
+        .fbplbadge {
+            background-color: #3B5998;
+            display: block;
+            height: 90px;
+            top: 15%;
+            margin-top: -75px;
+            position: absolute;
+            left: -47px;
+            width: 47px;
+            background-image: url("http://streamernews.tv/wp-content/uploads/2015/10/twitchsubredditsocial_2015oct-1.jpg");
+            background-repeat: no-repeat;
+            overflow: hidden;
+            -webkit-border-top-left-radius: 8px;
+            -webkit-border-bottom-left-radius: 8px;
+            -moz-border-radius-topleft: 8px;
+            -moz-border-radius-bottomleft: 8px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
     </style>
     <script type="text/javascript">
-    /*<![CDATA[*/
-    (function(w2b) {
-        w2b(document).ready(function() {
-            var $dur = "medium"; // Duration of Animation
-            w2b("#fbplikebox").css({
-                right: -350,
-                "top": 30
-            })
-            w2b("#fbplikebox").hover(function() {
-                w2b(this).stop().animate({
-                    right: 0
-                }, $dur);
-            }, function() {
-                w2b(this).stop().animate({
+        /*<![CDATA[*/
+        (function (w2b) {
+            w2b(document).ready(function () {
+                var $dur = "medium"; // Duration of Animation
+                w2b("#fbplikebox").css({
                     right: -350
-                }, $dur);
+                    , "top": 30
+                })
+                w2b("#fbplikebox").hover(function () {
+                    w2b(this).stop().animate({
+                        right: 0
+                    }, $dur);
+                }, function () {
+                    w2b(this).stop().animate({
+                        right: -350
+                    }, $dur);
+                });
+                w2b("#fbplikebox").show();
             });
-            w2b("#fbplikebox").show();
-        });
-    })(jQuery);
-    /*]]>*/
+        })(jQuery);
+        /*]]>*/
     </script>
-      <script type="text/javascript">
-      $(document).ready(function(){                       
-
-       //Navigation Menu Slider
-        $('#nav-expander').on('click',function(e){
-          e.preventDefault();
-          $('body').toggleClass('nav-expanded');
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Navigation Menu Slider
+            $('#nav-expander').on('click', function (e) {
+                e.preventDefault();
+                $('body').toggleClass('nav-expanded');
+            });
+            $('#nav-close').on('click', function (e) {
+                e.preventDefault();
+                $('body').removeClass('nav-expanded');
+            });
+            // Initialize navgoco with default options
+            $(".main-menu").navgoco({
+                caret: '<span class="caret"></span>'
+                , accordion: false
+                , openClass: 'open'
+                , save: true
+                , cookie: {
+                    name: 'navgoco'
+                    , expires: false
+                    , path: '/'
+                }
+                , slide: {
+                    duration: 300
+                    , easing: 'swing'
+                }
+            });
         });
-        $('#nav-close').on('click',function(e){
-          e.preventDefault();
-          $('body').removeClass('nav-expanded');
-        });
-
-        // Initialize navgoco with default options
-        $(".main-menu").navgoco({
-            caret: '<span class="caret"></span>',
-            accordion: false,
-            openClass: 'open',
-            save: true,
-            cookie: {
-                name: 'navgoco',
-                expires: false,
-                path: '/'
-            },
-            slide: {
-                duration: 300,
-                easing: 'swing'
+    </script>
+    <script type="text/javascript">
+        function changChat() {
+            if ($("#spChat").html() == 'Livehouse') {
+                $("#livehouseChat").hide();
+                $("#twitchChat").show();
+                $("#spChat").html("Twitch");
             }
-        });
-
-      });
-      </script>
-      <script type="text/javascript">
-      function changChat(){
-         if($("#spChat").html() == 'Livehouse')
-        {
-          $("#livehouseChat").hide();
-          $("#twitchChat").show();
-           $("#spChat").html("Twitch");     
+            else {
+                $("#twitchChat").hide();
+                $("#livehouseChat").show();
+                $("#spChat").html("Livehouse");
+            }
         }
-        else{
-          $("#twitchChat").hide();
-          $("#livehouseChat").show();
-          $("#spChat").html("Livehouse");
-        }
-    
-        }
-      </script>
+    </script>
+</head>
 
-    </head>
-    <body>
-      <title >Anotsukagehisa</title>
-      <div class="container">
-
-      <div class="navbar navbar-inverse navbar-fixed-bottom">  
-  <div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> 
-            <span class="sr-only"></span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> </button> 
-            <a class="navbar-brand" href="#"></a></div>
+<body>
+    <title>Anotsukagehisa</title>
+    <div class="container">
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="#"></a>
+            </div>
             <div id="navbar" class="collapse navbar-collapse">
-             <ul class="nav nav-pills">
-                <li role="presentation"> <a onclick=window.open("https://www.youtube.com/user/LIN801015")>YOUTUBE</a></li>
-                <li role="presentation" class="active"><a href="ChatOnly.html">聊天室之亂</a></li> 
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown"><font color="white">頻道切換</font><b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                     <li><a onclick="showTwitch();">Twitch</a></li>
-                       <li><a onclick="showVL();">VL</a></li>
-                       <li><a onclick="showYoutube();">Youtube</a></li>
-                    </ul>
-                </li>
-            </ul>    
-    <div class="navbar-header pull-right">
-      <a id="nav-expander" class="nav-expander fixed">聊天室<i class="fa fa-bars fa-lg white"></i></a>
-    </div>
-    </div> 
-</div>
-<iframe src="https://player.twitch.tv/?channel=anotsukagehisa" id="streamTwitch" frameborder="0" scrolling="no"   allowfullscreen="true" height="650" width="100%"></iframe>
-           <iframe src="http://vaughnlive.tv/embed/video/linzet000?viewers=true" id="streamVL"frameborder="0" scrolling="no" height="650" width="100%" style="visibility:hidden;display:none"></iframe>   
-      <div class="container">
-          <div class="container">
-         <div class="container">
-             <a onclick=window.open("https://www.facebook.com/ZunJueBuFanTaiWanDiWang/")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-c5d69c3a6adb05f2-320.png"></a>
-             <script id="_wauglx">var _wau = _wau || []; _wau.push(["small", "144tfbtnm097", "glx"]);
-(function() {var s=document.createElement("script"); s.async=true;
-s.src="http://widgets.amung.us/small.js";
-document.getElementsByTagName("head")[0].appendChild(s);
-})();</script>
-              <a onclick=window.open("http://www1.atwiki.jp/jtvwiki/pages/64.html")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-d4992a4f9e282aba-320.png"></a>
-               <a onclick=window.open("https://www.twitchalerts.com/donate/anotsukagehisa")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-88a6121b08144610-320.png"></a>
-              <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-00571834e646c711-320.png">
-              <input type=button onclick=window.open("https://www.twitch.tv/anotsukagehisa/subscribe") value="想看本本這邊有" class="btn btn-sm btn-success">
-              
-              
-           </div>
-         <nav>
-   <ul class="list-unstyled main-menu">
-    <li class="navbar-right"><a href="#" id="nav-close">X</a></li><span id="spChat" style="visibility:hidden">Twitch</span>
-    <div>
-      <button type="button" class="btn btn-success btn-xs" onclick="changChat();">切換聊天室</button> 
-   <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" scrolling="no" id="twitchChat"  frameborder="0" style="border:none; overflow:hidden; width:100%; height:550px;"allowtransparency="true"></iframe>
-   <iframe src="https://livehouse.in/channel/470709/chatroom" scrolling="no" id="livehouseChat" frameborder="0" style="border:none; overflow:hidden; width:100%; height:550px; display:none;"allowtransparency="true" ></iframe>
-    </div>
-    </nav>
-
-  
-          
-          
-        <footer class="footer">
-          <div class="container"><p class="text-muted"></p></div>
-        </footer>
-       <!--<div id="fbplikebox"  style="display:none;">
+                <ul class="nav nav-pills">
+                    <li role="presentation"> <a onclick=window.open( "https://www.youtube.com/user/LIN801015")>YOUTUBE</a></li>
+                    <li role="presentation" class="active"><a href="ChatOnly.html">聊天室之亂</a></li>
+                    <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"><font color="white">頻道切換</font><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a onclick="showTwitch();">Twitch</a></li>
+                            <li><a onclick="showVL();">VL</a></li>
+                            <li><a onclick="showYoutube();">Youtube</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="navbar-header pull-right"> <a id="nav-expander" class="nav-expander fixed">聊天室<i class="fa fa-bars fa-lg white"></i></a> </div>
+            </div>
+        </div>
+        <div class="stream__player" id="player">
+            <iframe frameborder="0" scrolling="no" allowfullscreen="no" src="http://player.twitch.tv/?channel=anotsukagehisa&amp;html5=true"> </iframe>
+            <div id="dragbar" class="stream__dragbar stream__dragbar--hidden-sm"></div>
+        </div>
+        <video src="blob:http://player.twitch.tv/745966d1-ddd3-498a-9b37-48f21f602756"></video>
+        <iframe src="http://vaughnlive.tv/embed/video/linzet000?viewers=true" id="streamVL" frameborder="0" scrolling="no" height="650" width="100%" style="visibility:hidden;display:none"></iframe>
+        <div class="container">
+            <div class="container">
+                <div class="container">
+                    <a onclick=window.open( "https://www.facebook.com/ZunJueBuFanTaiWanDiWang/")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-c5d69c3a6adb05f2-320.png"></a>
+                    <script id="_wauglx">
+                        var _wau = _wau || [];
+                        _wau.push(["small", "144tfbtnm097", "glx"]);
+                        (function () {
+                            var s = document.createElement("script");
+                            s.async = true;
+                            s.src = "http://widgets.amung.us/small.js";
+                            document.getElementsByTagName("head")[0].appendChild(s);
+                        })();
+                    </script>
+                    <a onclick=window.open( "http://www1.atwiki.jp/jtvwiki/pages/64.html")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-d4992a4f9e282aba-320.png"></a>
+                    <a onclick=window.open( "https://www.twitchalerts.com/donate/anotsukagehisa")><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-88a6121b08144610-320.png"></a> <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/panel-53629606-image-00571834e646c711-320.png">
+                    <input type=button onclick=window.open( "https://www.twitch.tv/anotsukagehisa/subscribe") value="想看本本這邊有" class="btn btn-sm btn-success"> </div>
+                <nav>
+                    <ul class="list-unstyled main-menu">
+                        <li class="navbar-right"><a href="#" id="nav-close">X</a></li><span id="spChat" style="visibility:hidden">Twitch</span>
+                        <div>
+                            <button type="button" class="btn btn-success btn-xs" onclick="changChat();">切換聊天室</button>
+                            <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" scrolling="no" id="twitchChat" frameborder="0" style="border:none; overflow:hidden; width:100%; height:550px;" allowtransparency="true"></iframe>
+                            <iframe src="https://livehouse.in/channel/470709/chatroom" scrolling="no" id="livehouseChat" frameborder="0" style="border:none; overflow:hidden; width:100%; height:550px; display:none;" allowtransparency="true"></iframe>
+                        </div>
+                </nav>
+                <footer class="footer">
+                    <div class="container">
+                        <p class="text-muted"></p>
+                    </div>
+                </footer>
+                <!--<div id="fbplikebox"  style="display:none;">
         <div class="fbplbadge" ></div>
        <iframe src="https://www.twitch.tv/anotsukagehisa/chat?popout=" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:500px;" allowtransparency="true"  ></iframe>
 
-        </div>-->
-      </div>
-    </body>
+        </div>--></div>
+</body>
+
 </html>
